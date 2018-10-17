@@ -1,0 +1,62 @@
+\hypertarget{main_8cpp}{}\section{/home/aurelien/controle/src/main.cpp File Reference}
+\label{main_8cpp}\index{/home/aurelien/controle/src/main.\+cpp@{/home/aurelien/controle/src/main.\+cpp}}
+
+
+programme qui propose d\textquotesingle{}ajouter / supprimer / afficher des valeurs dans un tableau via menu  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+programme qui propose d\textquotesingle{}ajouter / supprimer / afficher des valeurs dans un tableau via menu 
+
+\begin{DoxyAuthor}{Author}
+Aurelien\+\_\+\+Guillemot 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+On créer une variable cpt pour faire tourner une boucle. Cette valeur sera initialisé à 0. La boucle tournera tant que cpt = 0. L\textquotesingle{}option quitter incrementera cpt. 
+\begin{DoxyParams}{Parameters}
+{\em cpt} & = 0 \+: une fois incremente, on quitte le menu \\
+\hline
+{\em aux} & \+: (auxiliaire), est utiliser pour stocker les valeurs de l\textquotesingle{}utilisateur. Une fois que celui ci a choisi dans le menu ce qu\textquotesingle{}il voulait faire, aux est utilisé pour stocker le reel a ajouter / supprimer 1 fois / Supprimer partout. Chaque nouvelle valeur ecrase la precedente \\
+\hline
+{\em ree} & \+: Definie comme un vecteur de type float. les valeurs seront stocké dedans. \\
+\hline
+{\em i} & i permet de definir la taille du tableau. A chaque ajout de valeur il incremente et a chaque suppression, il decremente\\
+\hline
+\end{DoxyParams}
+ici debute le case qui va nous permettre de creer notre menu. case 1 \+: Ajouter reel / case 2 \+: afficher tous les reels / case 3 \+: Supprimer un reel 1 fois / case 4 \+: supprime le reel partout / case 5 \+: quitter le menu /$\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em menu} & \+: variable utilise par l\textquotesingle{}utilisateur pour naviguer dans le menu (switch) /$\ast$ \\
+\hline
+{\em j} & \+: sera appele a la creation de chaque boucle et detrtuit a la fin de celle ci. Il sert a afficher le nombre exact de reel dans le tableau\\
+\hline
+\end{DoxyParams}

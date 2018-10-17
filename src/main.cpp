@@ -15,11 +15,13 @@ int main (void)
 {
 
 /*! \brief On créer une variable cpt pour faire tourner une boucle. Cette valeur sera initialisé à 0. La boucle tournera tant que cpt = 0. L'option quitter incrementera cpt.
- * \param cpt = 0
+ * \param cpt = 0 : une fois incremente, on quitte le menu
+ * \param aux : (auxiliaire), est utiliser pour stocker les valeurs de l'utilisateur. Une fois que celui ci a choisi dans le menu ce qu'il voulait faire, aux est utilisé pour stocker le reel a ajouter / supprimer 1 fois / Supprimer partout. Chaque nouvelle valeur ecrase la precedente
+ * \param ree : Definie comme un vecteur de type float. les valeurs seront stocké dedans.
+ * \param i: i permet de definir la taille du tableau. A chaque ajout de valeur il incremente et a chaque suppression, il decremente
 */
 	int cpt;
 	float aux;
-	float aux_i;
 	vector <float> reel;
 	int i;
 
@@ -30,6 +32,11 @@ int main (void)
 		int menu;
 		cout << "Que voulez vous faire ? (1) Ajouter un reel ? (2) Afficher la liste des reels ? (3) Supprimer le premier reel ayant une valeur donnee ? (4) Supprimer tous les réels ayant une valeur donnee ? (5) Quitter" << endl;
 		cin >> menu;
+
+/*! \brief ici debute le case qui va nous permettre de creer notre menu. case 1 : Ajouter reel / case 2 : afficher tous les reels / case 3 : Supprimer un reel 1 fois / case 4 : supprime le reel partout / case 5 : quitter le menu
+/* \param menu : variable utilise par l'utilisateur pour naviguer dans le menu (switch)
+/* \param j : sera appele a la creation de chaque boucle et detrtuit a la fin de celle ci. Il sert a afficher le nombre exact de reel dans le tableau
+*/
 		switch (menu)
 		{
 		case 1 :
@@ -82,6 +89,8 @@ int main (void)
 		break;
 		}
 
+/* \brief Quand l'utilisateur decide de quitter le menu, on ecrit les valeurs reel dans un fichier txt du nom de reel.txt
+*/
 		case 5 :
 		{
 		ofstream fichier_reel;
@@ -99,6 +108,6 @@ int main (void)
 		break;}
 }
 	}
-	cout << reel.size() << endl;
+	// cout << reel.size() << endl;
 	return 0;
 }
