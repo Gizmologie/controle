@@ -15,7 +15,7 @@ int main (void)
 {
 
 /*! \brief On créer une variable cpt pour faire tourner une boucle. Cette valeur sera initialisé à 0. La boucle tournera tant que cpt = 0. L'option quitter incrementera cpt.
- * \param cpt = 0 : une fois incremente, on quitte le menu
+ * \param cpt = 0 : (compteur), une fois incremente, on quitte le menu.
  * \param aux : (auxiliaire), est utiliser pour stocker les valeurs de l'utilisateur. Une fois que celui ci a choisi dans le menu ce qu'il voulait faire, aux est utilisé pour stocker le reel a ajouter / supprimer 1 fois / Supprimer partout. Chaque nouvelle valeur ecrase la precedente
  * \param ree : Definie comme un vecteur de type float. les valeurs seront stocké dedans.
  * \param i: i permet de definir la taille du tableau. A chaque ajout de valeur il incremente et a chaque suppression, il decremente
@@ -67,7 +67,7 @@ int main (void)
 			if (aux==reel[j])
 			{
 				reel.erase(reel.begin() + j);
-				i--;
+				//i--;
 				break;
 			}
 		}
@@ -78,17 +78,16 @@ int main (void)
 		{
 		cout << "Supprimer tous les reels ayant une valeur donnee : Quel reel souhaitez-vous supprimer ?" << endl;
 		cin >> aux;
-		for (int j=0; j<i; j++)
+		for (int j=0; j<=i; j++)
 		{
 			if (reel[j] == aux)
 			{
 				reel.erase(reel.begin() + j);
-				i--;
+				//i--;
 			}
 		}
 		break;
 		}
-
 /* \brief Quand l'utilisateur decide de quitter le menu, on ecrit les valeurs reel dans un fichier txt du nom de reel.txt
 */
 		case 5 :
